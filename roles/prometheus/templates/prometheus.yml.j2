@@ -1,0 +1,12 @@
+global:
+  scrape_interval: 15s
+  external_labels:
+    instance: {{ ansible_facts['nodename'] }}
+
+scrape_configs:
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+
+remote_write:
+- url: '{{ remote_write }}'

@@ -1,0 +1,7 @@
+---
+# Variables listed are applicable for all hosts
+
+download_url: https://github.com/prometheus/prometheus/releases/download/v2.36.0/prometheus-2.36.0.linux-armv7.tar.gz
+remote_write: "http://127.0.0.1:10908/api/v1/receive"
+prometheus_dir: /opt/prometheus
+prometheus_data_dir: /var/lib/prometheus

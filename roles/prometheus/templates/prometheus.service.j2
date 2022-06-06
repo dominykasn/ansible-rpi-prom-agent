@@ -1,0 +1,16 @@
+[Unit]
+Description=Prometheus Raspberry Pi Server
+After=network-online.target
+
+[Service]
+Restart=on-failure
+User=prometheus
+Group=prometheus
+
+ExecStart={{ prometheus_dir }}/prometheus \
+  --config.file={{ prometheus_dir }}/prometheus.yml \
+  --enable-feature=agent \
+  --storage.agent.path={{ prometheus_data_dir }}
+
+[Install]
+WantedBy=multi-user.target

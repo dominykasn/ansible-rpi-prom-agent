@@ -1,0 +1,6 @@
+- name: Install prometheus agent to all raspberry pi's
+  hosts: raspberrynodes
+  remote_user: root
+
+  roles:
+    - prometheus
