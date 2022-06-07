@@ -1,7 +1,7 @@
 # ansible-rpi-prom-agent
 Basic ansible playbook for prometheus agent on raspberry pi
 
-Please change hosts file to your raspberry pi hostnames which you wish to install prometheus agent on
+Please change hosts file to your raspberry pi hostnames which you wish to install prometheus agent on.
 ```
 [raspberrynodes]
 rasp1.local
